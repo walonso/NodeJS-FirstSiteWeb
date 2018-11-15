@@ -13,3 +13,8 @@ http://localhost:3000
 
 Para ejecutarlo:
 ```nodemon server.js```
+
+Todo lo que esta dentro de scripts en package.json a excepcion del start corren con npm run..
+npm start
+npm run nodemon
+npm run start

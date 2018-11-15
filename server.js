@@ -4,6 +4,8 @@ const app = express();
 const hbs = require('hbs');
 require('./hbs/helper');
 
+const port = process.env.PORT || 3000;
+
 //Se puede colocar una carpeta public y dejar contenido estatico,
 //sin embargo esto deshabilitara lo que esta abajo de "app.get...",
 //dado que siempre estaria llendo por la carpeta publica.
@@ -41,6 +43,6 @@ app.get('/about', (req, res) => {
     res.render('about');
 })
 
-app.listen(3000, () => {
-    console.log('Escuchando peticiones en puerto 3000');
+app.listen(port, () => {
+    console.log(`Escuchando peticiones en puerto ${port}`);
 })
